@@ -124,6 +124,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 }
 .navbar-toggle {
 	border-radius: 0;
+	background-color: #262626;
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
 	background-color: #d43031;
@@ -276,26 +277,43 @@ header .intro-text {
 	color: #444;
 	margin: 20px 0;
 	text-align: center;
+	word-wrap: break-word;
 }
 #restaurant-menu .menu-item {
 	margin: 45px 0;
 	font-size: 18px;
+	display: grid;
+	grid-column-gap: 10px;
+	grid-template-columns: 10% 70% 20%;
 }
+
+#restaurant-menu .menu-item-number {
+	font-weight: 600;
+	font-size: 20px;
+	color: #444;
+	margin-bottom: 10px;
+	grid-column-start: 1;
+}
+
 #restaurant-menu .menu-item-name {
 	font-weight: 400;
 	font-size: 20px;
 	color: #444;
 	margin-bottom: 10px;
+	grid-column-start: 2;
 }
 #restaurant-menu .menu-item-description {
 	font-size: 15px;
 	width: 85%;
+	grid-column-start: 2;
+	grid-column-end: 4;
+	grid-row-start: 2;
 }
 #restaurant-menu .menu-item-price {
-	float: right;
 	font-weight: 400;
 	color: #555;
-	margin-top: -36px;
+	grid-column-start: 3;
+	text-align: right;
 }
 /* Gallery Section */
 #gallery {
