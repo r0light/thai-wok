@@ -340,7 +340,7 @@ header .intro-text {
 }
 /* Contact Section */
 #contact {
-	padding: 100px 0;
+	padding: 100px 0 0 0;
 	background: #333;
 }
 #contact .contact-item p {
@@ -427,6 +427,21 @@ color: #999;
 	margin-bottom: 6px;
 	display: inline-block;
 }
+/* legal section */
+#legal {
+	padding: 20px 0 20px 0;
+	background: #333;
+}
+
+#legal h3 {
+	position: relative;
+	text-transform: uppercase;
+	font-size: 18px;
+	font-weight: 400;
+	color: #aaa;
+	padding: 20px 0;
+}
+
 /* Footer Section*/
 #footer {
 	background: #262626;
