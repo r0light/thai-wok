@@ -284,7 +284,7 @@ header .intro-text {
 	font-size: 18px;
 	display: grid;
 	grid-column-gap: 10px;
-	grid-template-columns: 10% 70% 20%;
+	grid-template-columns: 8% 72% 20%;
 }
 
 #restaurant-menu .menu-item-number {
