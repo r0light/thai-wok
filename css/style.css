@@ -20,7 +20,7 @@ h2 {
 	margin-bottom: 15px;
 	padding-bottom: 20px;
 }
-h2::after {
+h2:after {
 	position: absolute;
 	content: "";
 	background: #d43031;
@@ -29,6 +29,19 @@ h2::after {
 	bottom: 0;
 	margin-left: -35px;
 	left: 50%;
+}
+h2.left {
+	word-wrap: break-word;
+}
+h2.left::after {
+	position: absolute;
+	content: "";
+	background: #d43031;
+	height: 2px;
+	width: 70px;
+	bottom: 0;
+	margin-left: 35px;
+	left: 0%;
 }
 h3 {
 	font-size: 24px;
