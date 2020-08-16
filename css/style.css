@@ -345,9 +345,6 @@ header .intro-text {
 	margin-left: 0;
 	left: 0;
 }
-#team img {
-	max-width: 550px;
-}
 #team .team-img {
 	display: inline-block;
 	position: relative;
