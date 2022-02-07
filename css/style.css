@@ -329,6 +329,12 @@ header .intro-text {
 	grid-column-start: 3;
 	text-align: right;
 }
+
+#restaurant-menu sup {
+	font-size: 55%;
+	margin-left: 5px;
+}
+
 /* Gallery Section */
 #gallery {
 	padding: 0;

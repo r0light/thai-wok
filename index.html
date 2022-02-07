@@ -139,7 +139,7 @@ title: Thaiwok Oberhaid
           {% for starter in starters %}
           <div class="menu-item">
             <div class="menu-item-number">{{starter.number}}</div>
-            <div class="menu-item-name">{{starter.name}}</div>
+            <div class="menu-item-name">{{starter.name}}<sup>{{starter.tags}}</sup></div>
             <div class="menu-item-price"> {{starter.price}} €</div>
             <div class="menu-item-description">{{starter.description}}</div>
           </div>
@@ -153,7 +153,7 @@ title: Thaiwok Oberhaid
           {% for noodle in noodles %}
           <div class="menu-item">
             <div class="menu-item-number">{{noodle.number}}</div>
-            <div class="menu-item-name">{{noodle.name}}</div>
+            <div class="menu-item-name">{{noodle.name}}<sup>{{noodle.tags}}</sup></div>
             <div class="menu-item-price"> {{noodle.price}} €</div>
             <div class="menu-item-description">{{noodle.description}}</div>
           </div>
@@ -169,7 +169,7 @@ title: Thaiwok Oberhaid
           {% for rice in rices %}
           <div class="menu-item">
             <div class="menu-item-number">{{rice.number}}</div>
-            <div class="menu-item-name">{{rice.name}}</div>
+            <div class="menu-item-name">{{rice.name}}<sup>{{rice.tags}}</sup></div>
             <div class="menu-item-price"> {{rice.price}} €</div>
             <div class="menu-item-description">{{rice.description}}</div>
           </div>
@@ -183,7 +183,7 @@ title: Thaiwok Oberhaid
           {% for chicken-rice in chicken-rices %}
           <div class="menu-item">
             <div class="menu-item-number">{{chicken-rice.number}}</div>
-            <div class="menu-item-name">{{chicken-rice.name}}</div>
+            <div class="menu-item-name">{{chicken-rice.name}}<sup>{{chicken-rice.tags}}</sup></div>
             <div class="menu-item-price"> {{chicken-rice.price}} €</div>
             <div class="menu-item-description">{{chicken-rice.description}}</div>
           </div>
@@ -199,7 +199,7 @@ title: Thaiwok Oberhaid
           {% for crispy-chicken in crispy-chickens %}
           <div class="menu-item">
             <div class="menu-item-number">{{crispy-chicken.number}}</div>
-            <div class="menu-item-name">{{crispy-chicken.name}}</div>
+            <div class="menu-item-name">{{crispy-chicken.name}}<sup>{{crispy-chicken.tags}}</sup></div>
             <div class="menu-item-price"> {{crispy-chicken.price}} €</div>
             <div class="menu-item-description">{{crispy-chicken.description}}</div>
           </div>
@@ -213,7 +213,7 @@ title: Thaiwok Oberhaid
           {% for pork-rice in pork-rices %}
           <div class="menu-item">
             <div class="menu-item-number">{{pork-rice.number}}</div>
-            <div class="menu-item-name">{{pork-rice.name}}</div>
+            <div class="menu-item-name">{{pork-rice.name}}<sup>{{pork-rice.tags}}</sup></div>
             <div class="menu-item-price"> {{pork-rice.price}} €</div>
             <div class="menu-item-description">{{pork-rice.description}}</div>
           </div>
@@ -229,7 +229,7 @@ title: Thaiwok Oberhaid
           {% for beef in beefs %}
           <div class="menu-item">
             <div class="menu-item-number">{{beef.number}}</div>
-            <div class="menu-item-name">{{beef.name}}</div>
+            <div class="menu-item-name">{{beef.name}}<sup>{{beef.tags}}</sup></div>
             <div class="menu-item-price"> {{beef.price}} €</div>
             <div class="menu-item-description">{{beef.description}}</div>
           </div>
@@ -243,7 +243,7 @@ title: Thaiwok Oberhaid
           {% for prawn in prawns %}
           <div class="menu-item">
             <div class="menu-item-number">{{prawn.number}}</div>
-            <div class="menu-item-name">{{prawn.name}}</div>
+            <div class="menu-item-name">{{prawn.name}}<sup>{{prawn.tags}}</sup></div>
             <div class="menu-item-price"> {{prawn.price}} €</div>
             <div class="menu-item-description">{{prawn.description}}</div>
           </div>
@@ -259,7 +259,7 @@ title: Thaiwok Oberhaid
           {% for crispy-duck in crispy-ducks %}
           <div class="menu-item">
             <div class="menu-item-number">{{crispy-duck.number}}</div>
-            <div class="menu-item-name">{{crispy-duck.name}}</div>
+            <div class="menu-item-name">{{crispy-duck.name}}<sup>{{crispy-duck.tags}}</sup></div>
             <div class="menu-item-price"> {{crispy-duck.price}} €</div>
             <div class="menu-item-description">{{crispy-duck.description}}</div>
           </div>
@@ -273,7 +273,7 @@ title: Thaiwok Oberhaid
           {% for veggie in veggies %}
           <div class="menu-item">
             <div class="menu-item-number">{{veggie.number}}</div>
-            <div class="menu-item-name">{{veggie.name}}</div>
+            <div class="menu-item-name">{{veggie.name}}<sup>{{veggie.tags}}</sup></div>
             <div class="menu-item-price"> {{veggie.price}} €</div>
             <div class="menu-item-description">{{veggie.description}}</div>
           </div>
@@ -289,7 +289,7 @@ title: Thaiwok Oberhaid
           {% for thai in thais %}
           <div class="menu-item">
             <div class="menu-item-number">{{thai.number}}</div>
-            <div class="menu-item-name">{{thai.name}}</div>
+            <div class="menu-item-name">{{thai.name}}<sup>{{thai.tags}}</sup></div>
             <div class="menu-item-price"> {{thai.price}} €</div>
             <div class="menu-item-description">{{thai.description}}</div>
           </div>
@@ -395,11 +395,21 @@ title: Thaiwok Oberhaid
             {% for dessert in desserts %}
             <div class="menu-item">
               <div class="menu-item-number">{{dessert.number}}</div>
-              <div class="menu-item-name">{{dessert.name}}</div>
+              <div class="menu-item-name">{{dessert.name}}<sup>{{dessert.tags}}</sup></div>
               <div class="menu-item-price"> {{dessert.price}} €</div>
               <div class="menu-item-description">{{dessert.description}}</div>
             </div>
             {% endfor %}
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12">
+          <div class="menu-section">
+            <h5>Zusatzstoffe</h5>
+            <p>Konservierungsmittel = 1, Geschmacksverstärker = 2, Süßungsmittel = 3</p>
+            <h5>Allergenkennzeichen</h5>
+            <p>Ei = C, Fisch = D, Soja = F, Sesam = N, Milch = G</p>
           </div>
         </div>
       </div>
