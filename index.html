@@ -139,7 +139,7 @@ title: Thaiwok Oberhaid
           {% for starter in starters %}
           <div class="menu-item">
             <div class="menu-item-number">{{starter.number}}</div>
-            <div class="menu-item-name">{{starter.name}}</div>
+            <div class="menu-item-name">{{starter.name}}<sup>{{starter.tags}}</sup></div>
             <div class="menu-item-price"> {{starter.price}} €</div>
             <div class="menu-item-description">{{starter.description}}</div>
           </div>
@@ -149,60 +149,15 @@ title: Thaiwok Oberhaid
       <div class="col-xs-12 col-sm-6">
         <div class="menu-section">
           <h2 class="menu-section-title">Gebratene Nudeln</h2>
+          {% assign noodles = site.data.noodles %}
+          {% for noodle in noodles %}
           <div class="menu-item">
-            <div class="menu-item-number">11</div>
-            <div class="menu-item-name">mit Gemüse</div>
-            <div class="menu-item-price"> 5,90 € </div>
-            <div class="menu-item-description"> </div>
+            <div class="menu-item-number">{{noodle.number}}</div>
+            <div class="menu-item-name">{{noodle.name}}<sup>{{noodle.tags}}</sup></div>
+            <div class="menu-item-price"> {{noodle.price}} €</div>
+            <div class="menu-item-description">{{noodle.description}}</div>
           </div>
-          <div class="menu-item">
-            <div class="menu-item-number">12</div>
-            <div class="menu-item-name">mit Hühnerfleisch und Gemüse</div>
-            <div class="menu-item-price"> 6,90 €</div>
-            <div class="menu-item-description"> </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">13</div>
-            <div class="menu-item-name">mit Hühnerfleisch und Gemüse</div>
-            <div class="menu-item-price"> 7,20 €</div>
-            <div class="menu-item-description"> (süß-sauer, leicht scharf) </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">14</div>
-            <div class="menu-item-name">mit Schweinefleisch und Gemüse</div>
-            <div class="menu-item-price"> 6,90 € </div>
-            <div class="menu-item-description"> </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">15</div>
-            <div class="menu-item-name">mit Rindfleisch und Gemüse</div>
-            <div class="menu-item-price"> 7,50 € </div>
-            <div class="menu-item-description"> </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">16</div>
-            <div class="menu-item-name">mit Garnelen und Gemüse</div>
-            <div class="menu-item-price"> 7,90 € </div>
-            <div class="menu-item-description"> </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">17</div>
-            <div class="menu-item-name">Bami-Goreng</div>
-            <div class="menu-item-price"> 7,50 € </div>
-            <div class="menu-item-description">(mit verschiedenem Fleisch und Gemüse)</div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">18</div>
-            <div class="menu-item-name">mit knusprigem Hühnerfleisch und Gemüse</div>
-            <div class="menu-item-price"> 7,90 € </div>
-            <div class="menu-item-description"> </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">19</div>
-            <div class="menu-item-name">mit knuspriger Ente und Gemüse</div>
-            <div class="menu-item-price"> 8,70 € </div>
-            <div class="menu-item-description"> </div>
-          </div>
+          {% endfor %}
         </div>
       </div>
     </div>
@@ -210,113 +165,29 @@ title: Thaiwok Oberhaid
       <div class="col-xs-12 col-sm-6">
         <div class="menu-section">
           <h2 class="menu-section-title">Gebratener Reis</h2>
+          {% assign rices = site.data.rices %}
+          {% for rice in rices %}
           <div class="menu-item">
-            <div class="menu-item-number">21</div>
-            <div class="menu-item-name">mit Ei und Gemüse</div>
-            <div class="menu-item-price"> 5,90 € </div>
-            <div class="menu-item-description"> </div>
+            <div class="menu-item-number">{{rice.number}}</div>
+            <div class="menu-item-name">{{rice.name}}<sup>{{rice.tags}}</sup></div>
+            <div class="menu-item-price"> {{rice.price}} €</div>
+            <div class="menu-item-description">{{rice.description}}</div>
           </div>
-          <div class="menu-item">
-            <div class="menu-item-number">22</div>
-            <div class="menu-item-name">mit Ei, Hühnerfleisch und Gemüse</div>
-            <div class="menu-item-price"> 6,90 €</div>
-            <div class="menu-item-description"> </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">23</div>
-            <div class="menu-item-name">mit Ei, Hühnerfleisch und Gemüse</div>
-            <div class="menu-item-price"> 7,20 €</div>
-            <div class="menu-item-description"> (süß-sauer, leicht scharf) </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">24</div>
-            <div class="menu-item-name">mit Ei, Schweinefleisch und Gemüse</div>
-            <div class="menu-item-price"> 6,90 € </div>
-            <div class="menu-item-description"> </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">25</div>
-            <div class="menu-item-name">mit Ei, Rindfleisch und Gemüse</div>
-            <div class="menu-item-price"> 7,50 € </div>
-            <div class="menu-item-description"> </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">26</div>
-            <div class="menu-item-name">mit Garnelen und Gemüse</div>
-            <div class="menu-item-price"> 7,90 € </div>
-            <div class="menu-item-description"> </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">27</div>
-            <div class="menu-item-name">Bami-Goreng</div>
-            <div class="menu-item-price"> 7,50 € </div>
-            <div class="menu-item-description">(mit verschiedenem Fleisch und Gemüse)</div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">28</div>
-            <div class="menu-item-name">mit knusprigem Hühnerfleisch und Gemüse</div>
-            <div class="menu-item-price"> 7,90 € </div>
-            <div class="menu-item-description"> </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">29</div>
-            <div class="menu-item-name">mit knuspriger Ente und Gemüse</div>
-            <div class="menu-item-price"> 8,70 € </div>
-            <div class="menu-item-description"> </div>
-          </div>
+          {% endfor %}
         </div>
       </div>
       <div class="col-xs-12 col-sm-6">
         <div class="menu-section">
           <h2 class="menu-section-title">Hühnerfleischgerichte <br>(mit Reis)</h2>
+          {% assign chicken-rices = site.data.chicken-rices %}
+          {% for chicken-rice in chicken-rices %}
           <div class="menu-item">
-            <div class="menu-item-number">31</div>
-            <div class="menu-item-name">Gäng Pet Gai (scharf)</div>
-            <div class="menu-item-price"> 8,50 € </div>
-            <div class="menu-item-description"> mit rotem Curry, Kokosmilch, Gemüse und Basilikum</div>
+            <div class="menu-item-number">{{chicken-rice.number}}</div>
+            <div class="menu-item-name">{{chicken-rice.name}}<sup>{{chicken-rice.tags}}</sup></div>
+            <div class="menu-item-price"> {{chicken-rice.price}} €</div>
+            <div class="menu-item-description">{{chicken-rice.description}}</div>
           </div>
-          <div class="menu-item">
-            <div class="menu-item-number">32</div>
-            <div class="menu-item-name">Gäng Kio Wan Gai (scharf)</div>
-            <div class="menu-item-price"> 8,50 €</div>
-            <div class="menu-item-description">mit grünem Curry, Kokosmilch, Gemüse und Basilikum</div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">33</div>
-            <div class="menu-item-name">Gai Pad Prak</div>
-            <div class="menu-item-price"> 7,90 €</div>
-            <div class="menu-item-description"> gebraten, mit verschiedenem Gemüse</div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">34</div>
-            <div class="menu-item-name">Gai Pad Pet (scharf)</div>
-            <div class="menu-item-price"> 7,90 € </div>
-            <div class="menu-item-description">gebraten, mit Gemüse in Chili-Curry und Knoblauch</div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">35</div>
-            <div class="menu-item-name">Gai Pad Priew Wan</div>
-            <div class="menu-item-price"> 7,90 € </div>
-            <div class="menu-item-description">gebraten, mit Ananas, Tomaten und Gemüse (Thai)</div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">36</div>
-            <div class="menu-item-name">Gai Pad Pik Sot (scharf)</div>
-            <div class="menu-item-price"> 7,90 € </div>
-            <div class="menu-item-description">gebraten, mit Peperoni, Zwiebeln und Basilikum</div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">37</div>
-            <div class="menu-item-name">Gai Pad Pik</div>
-            <div class="menu-item-price"> 7,90 € </div>
-            <div class="menu-item-description">gebraten, mit Gemüse und Knoblauch (leicht scharf)</div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">38</div>
-            <div class="menu-item-name">Gai Pad Kra Tim Prig Thai</div>
-            <div class="menu-item-price"> 7,90 € </div>
-            <div class="menu-item-description">Huhn in Knoblauch und Pfeffersoße </div>
-          </div>
+          {% endfor %}
         </div>
       </div>
     </div>
@@ -324,101 +195,29 @@ title: Thaiwok Oberhaid
       <div class="col-xs-12 col-sm-6">
         <div class="menu-section">
           <h2 class="menu-section-title">Knusprige Hühnerfleischgerichte <br>(mit Reis)</h2>
+          {% assign crispy-chickens = site.data.crispy-chickens %}
+          {% for crispy-chicken in crispy-chickens %}
           <div class="menu-item">
-            <div class="menu-item-number">41</div>
-            <div class="menu-item-name">Gäng Pet Gai Tod</div>
-            <div class="menu-item-price"> 8,90 € </div>
-            <div class="menu-item-description"> mit rotem Curry, Kokosmilch, Gemüse und Basilikum</div>
+            <div class="menu-item-number">{{crispy-chicken.number}}</div>
+            <div class="menu-item-name">{{crispy-chicken.name}}<sup>{{crispy-chicken.tags}}</sup></div>
+            <div class="menu-item-price"> {{crispy-chicken.price}} €</div>
+            <div class="menu-item-description">{{crispy-chicken.description}}</div>
           </div>
-          <div class="menu-item">
-            <div class="menu-item-number">42</div>
-            <div class="menu-item-name">Gäng Kio Wan Gai</div>
-            <div class="menu-item-price"> 8,90 €</div>
-            <div class="menu-item-description">mit grünem Curry, Kokosmilch, Gemüse und Basilikum</div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">43</div>
-            <div class="menu-item-name">Pad Prak Gai Tod</div>
-            <div class="menu-item-price"> 8,50 €</div>
-            <div class="menu-item-description"> mit verschiedenem Gemüse</div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">45</div>
-            <div class="menu-item-name">Pad Priew Wan Gai Tod</div>
-            <div class="menu-item-price"> 8,50 € </div>
-            <div class="menu-item-description">mit Ananas und süß-sauer Soße</div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">47</div>
-            <div class="menu-item-name">Pad Pik Gai Tod</div>
-            <div class="menu-item-price"> 8,50 € </div>
-            <div class="menu-item-description">mit Gemüse und Knoblauch (leicht scharf)</div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">48</div>
-            <div class="menu-item-name">Kra Tim Prig Thai Gai Tod</div>
-            <div class="menu-item-price"> 8,50 € </div>
-            <div class="menu-item-description">in Knoblauch und Pfeffersoße </div>
-          </div>
+          {% endfor %}
         </div>
       </div>
       <div class="col-xs-12 col-sm-6">
         <div class="menu-section">
           <h2 class="menu-section-title">Schweinefleischgerichte <br>(mit Reis)</h2>
+          {% assign pork-rices = site.data.pork-rices %}
+          {% for pork-rice in pork-rices %}
           <div class="menu-item">
-            <div class="menu-item-number">51</div>
-            <div class="menu-item-name">Gäng Pet Moo (scharf)</div>
-            <div class="menu-item-price"> 8,50 € </div>
-            <div class="menu-item-description"> mit rotem Curry, Kokosmilch und Gemüse</div>
+            <div class="menu-item-number">{{pork-rice.number}}</div>
+            <div class="menu-item-name">{{pork-rice.name}}<sup>{{pork-rice.tags}}</sup></div>
+            <div class="menu-item-price"> {{pork-rice.price}} €</div>
+            <div class="menu-item-description">{{pork-rice.description}}</div>
           </div>
-          <div class="menu-item">
-            <div class="menu-item-number">52</div>
-            <div class="menu-item-name">Gäng Kio Wan Moo (scharf)</div>
-            <div class="menu-item-price"> 8,50 €</div>
-            <div class="menu-item-description">mit grünem Curry, Kokosmilch und Gemüse</div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">53</div>
-            <div class="menu-item-name">Moo Pad Prak</div>
-            <div class="menu-item-price"> 7,90 €</div>
-            <div class="menu-item-description"> gebraten, mit verschiedenem Gemüse</div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">54</div>
-            <div class="menu-item-name">Moo Pad Pet (scharf)</div>
-            <div class="menu-item-price"> 7,90 € </div>
-            <div class="menu-item-description">gebraten, mit Gemüse in Chili-Curry und Knoblauch</div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">55</div>
-            <div class="menu-item-name">Moo Pad Priew Wan</div>
-            <div class="menu-item-price"> 7,90 € </div>
-            <div class="menu-item-description">gebraten, mit Ananas, Tomaten und Gemüse (Thai)</div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">56</div>
-            <div class="menu-item-name">Moo Pad Pik Sot (scharf)</div>
-            <div class="menu-item-price"> 7,90 € </div>
-            <div class="menu-item-description">gebraten mit Peperoni, Zwiebeln und Basilikum</div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">57</div>
-            <div class="menu-item-name">Moo Pad Pik</div>
-            <div class="menu-item-price"> 7,90 € </div>
-            <div class="menu-item-description">gebraten, mit Gemüse und Knoblauch (leicht scharf)</div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">58</div>
-            <div class="menu-item-name">Moo Pad Kra Tim Prig Thai</div>
-            <div class="menu-item-price"> 7,90 € </div>
-            <div class="menu-item-description">in Knoblauch und Pfeffersoße </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">59</div>
-            <div class="menu-item-name">Moo Pad Pik Phau</div>
-            <div class="menu-item-price"> 7,90 € </div>
-            <div class="menu-item-description">gebraten, mit Gemüse in Chili-Paste und Knoblauch</div>
-          </div>
+          {% endfor %}
         </div>
       </div>
     </div>
@@ -426,107 +225,29 @@ title: Thaiwok Oberhaid
       <div class="col-xs-12 col-sm-6">
         <div class="menu-section">
           <h2 class="menu-section-title">Rindfleischgerichte</h2>
+          {% assign beefs = site.data.beefs %}
+          {% for beef in beefs %}
           <div class="menu-item">
-            <div class="menu-item-number">61</div>
-            <div class="menu-item-name">Gäng Pet Nüa (scharf)</div>
-            <div class="menu-item-price"> 8,90 €   </div>
-            <div class="menu-item-description"> mit rotem Curry, Kokosmilch und Gemüse </div>
+            <div class="menu-item-number">{{beef.number}}</div>
+            <div class="menu-item-name">{{beef.name}}<sup>{{beef.tags}}</sup></div>
+            <div class="menu-item-price"> {{beef.price}} €</div>
+            <div class="menu-item-description">{{beef.description}}</div>
           </div>
-          <div class="menu-item">
-            <div class="menu-item-number">62</div>
-            <div class="menu-item-name">Gäng Kio Wan Nüa (scharf)</div>
-            <div class="menu-item-price"> 8,90 €</div>
-            <div class="menu-item-description"> mit grünem Curry, Kokosmilch und Gemüse </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">63</div>
-            <div class="menu-item-name">Nüa Pad Prak</div>
-            <div class="menu-item-price"> 8,50 € </div>
-            <div class="menu-item-description"> gebraten, mit verschiedenem Gemüse </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">64</div>
-            <div class="menu-item-name">Nüa Pad Pet (scharf)</div>
-            <div class="menu-item-price"> 8,50 € </div>
-            <div class="menu-item-description"> gebraten, mit Gemüse in Chili, Curry und Knoblauch </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">65</div>
-            <div class="menu-item-name">Nüa Pad Priew Wan</div>
-            <div class="menu-item-price"> 8,50 € </div>
-            <div class="menu-item-description"> gebraten, mit Ananas, Tomaten und Gemüse </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">66</div>
-            <div class="menu-item-name">Nüa Pad Pik Sot (scharf)</div>
-            <div class="menu-item-price"> 8,50 € </div>
-            <div class="menu-item-description"> gebraten, mit Pepperoni, Zwiebeln und Basilikum </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">67</div>
-            <div class="menu-item-name">Nüa Pad Pik</div>
-            <div class="menu-item-price"> 8,50 € </div>
-            <div class="menu-item-description"> gebraten, mit Gemüse und Knoblauch (leicht scharf) </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">69</div>
-            <div class="menu-item-name">Nüa Pad Pik Phau</div>
-            <div class="menu-item-price"> 8,50 € </div>
-            <div class="menu-item-description"> gebraten, mit Gemüse in Chili, Paste und Knoblauch </div>
-          </div>
+          {% endfor %}
         </div>
       </div>
       <div class="col-xs-12 col-sm-6">
         <div class="menu-section">
           <h2 class="menu-section-title">Garnelengerichte</h2>
+          {% assign prawns = site.data.prawns %}
+          {% for prawn in prawns %}
           <div class="menu-item">
-            <div class="menu-item-number">71</div>
-            <div class="menu-item-name">Gäng Pet Gung (scharf)</div>
-            <div class="menu-item-price"> 9,20 € </div>
-            <div class="menu-item-description"> mit rotem Curry, Kokosmilch und Gemüse </div>
+            <div class="menu-item-number">{{prawn.number}}</div>
+            <div class="menu-item-name">{{prawn.name}}<sup>{{prawn.tags}}</sup></div>
+            <div class="menu-item-price"> {{prawn.price}} €</div>
+            <div class="menu-item-description">{{prawn.description}}</div>
           </div>
-          <div class="menu-item">
-            <div class="menu-item-number">72</div>
-            <div class="menu-item-name">Gäng Kio Wan Gung (scharf)</div>
-            <div class="menu-item-price"> 9,20 €</div>
-            <div class="menu-item-description"> mit grünem Curry, Kokosmilch und Gemüse </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">73</div>
-            <div class="menu-item-name">Gung Pad Prak</div>
-            <div class="menu-item-price"> 8,90 € </div>
-            <div class="menu-item-description"> gebraten, mit verschiedenem Gemüse</div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">75</div>
-            <div class="menu-item-name">Gung Pad Priew Wan</div>
-            <div class="menu-item-price"> 8,90 € </div>
-            <div class="menu-item-description"> gebraten, mit Ananas Tomaten und Gemüse </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">76</div>
-            <div class="menu-item-name">Gung Pad Pik Sot (scharf)</div>
-            <div class="menu-item-price"> 8,90 € </div>
-            <div class="menu-item-description"> gebraten, mit Pepperoni, Zwiebeln und Basilikum </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">77</div>
-            <div class="menu-item-name">Gung Pad Prik (leicht scharf) </div>
-            <div class="menu-item-price"> 8,90 € </div>
-            <div class="menu-item-description"> gebraten, mit Gemüse und Knoblauch  </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">78</div>
-            <div class="menu-item-name">Gung Pad Kra Tim Prig Thai</div>
-            <div class="menu-item-price"> 8,90 € </div>
-            <div class="menu-item-description"> in Knoblauch und Pfeffersoße </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">79</div>
-            <div class="menu-item-name">Gung Pad Pik Phau</div>
-            <div class="menu-item-price"> 8,90 € </div>
-            <div class="menu-item-description"> gebraten, mit Gemüse in Chili, Paste und Knoblauch </div>
-          </div>
+          {% endfor %}
         </div>
       </div>
     </div>
@@ -534,83 +255,29 @@ title: Thaiwok Oberhaid
       <div class="col-xs-12 col-sm-6">
         <div class="menu-section">
           <h2 class="menu-section-title">Knusprige Entengerichte</h2>
+          {% assign crispy-ducks = site.data.crispy-ducks %}
+          {% for crispy-duck in crispy-ducks %}
           <div class="menu-item">
-            <div class="menu-item-number">81</div>
-            <div class="menu-item-name">Gäng Pet Ped Tod</div>
-            <div class="menu-item-price"> 9,90 € </div>
-            <div class="menu-item-description"> mit rotem Curry, Kokosmilch, Gemüse und Basilikum </div>
+            <div class="menu-item-number">{{crispy-duck.number}}</div>
+            <div class="menu-item-name">{{crispy-duck.name}}<sup>{{crispy-duck.tags}}</sup></div>
+            <div class="menu-item-price"> {{crispy-duck.price}} €</div>
+            <div class="menu-item-description">{{crispy-duck.description}}</div>
           </div>
-          <div class="menu-item">
-            <div class="menu-item-number">82</div>
-            <div class="menu-item-name">Gäng Kio Wan Ped</div>
-            <div class="menu-item-price"> 9,90 € </div>
-            <div class="menu-item-description"> mit grünem Curry, Kokosmilch, Gemüse und Basilikum </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">83</div>
-            <div class="menu-item-name">Pad Prak Ped Tod</div>
-            <div class="menu-item-price"> 9,50 € </div>
-            <div class="menu-item-description"> mit verschiedenem Gemüse </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">85</div>
-            <div class="menu-item-name">Pad Priew Wan Ped Tod</div>
-            <div class="menu-item-price"> 9,50 € </div>
-            <div class="menu-item-description"> mit Ananas und Soße süß-sauer </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">87</div>
-            <div class="menu-item-name">Pad Pik Ped Tod</div>
-            <div class="menu-item-price"> 9,50 € </div>
-            <div class="menu-item-description"> mit Gemüse und Knoblauch (leicht scharf) </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">88</div>
-            <div class="menu-item-name">Kra Tim Prig Thai Ped Tod</div>
-            <div class="menu-item-price"> 9,50 € </div>
-            <div class="menu-item-description"> in Knoblauch und Pfeffersoße </div>
-          </div>
+          {% endfor %}
         </div>
       </div>
       <div class="col-xs-12 col-sm-6">
         <div class="menu-section">
           <h2 class="menu-section-title">Vegetarische Gerichte</h2>
+          {% assign veggies = site.data.veggies %}
+          {% for veggie in veggies %}
           <div class="menu-item">
-            <div class="menu-item-number">91</div>
-            <div class="menu-item-name">Thai rotes Curry</div>
-            <div class="menu-item-price"> 7,50 € </div>
-            <div class="menu-item-description"> mit Tofu, Kokosmilch und Gemüse </div>
+            <div class="menu-item-number">{{veggie.number}}</div>
+            <div class="menu-item-name">{{veggie.name}}<sup>{{veggie.tags}}</sup></div>
+            <div class="menu-item-price"> {{veggie.price}} €</div>
+            <div class="menu-item-description">{{veggie.description}}</div>
           </div>
-          <div class="menu-item">
-            <div class="menu-item-number">92</div>
-            <div class="menu-item-name">Thai grünes Curry</div>
-            <div class="menu-item-price"> 7,50 € </div>
-            <div class="menu-item-description"> mit Tofu, Kokosmilch und Gemüse </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">93</div>
-            <div class="menu-item-name">Gebratener Tofu</div>
-            <div class="menu-item-price"> 7,20 € </div>
-            <div class="menu-item-description"> mit verschiedenem Gemüse </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">94</div>
-            <div class="menu-item-name">Gebratener Tofu mit Gemüse</div>
-            <div class="menu-item-price"> 7,20 € </div>
-            <div class="menu-item-description"> in Chili-Knoblauch Soße </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">95</div>
-            <div class="menu-item-name">Gebratener Tofu mit Ananas</div>
-            <div class="menu-item-price"> 7,20 € </div>
-            <div class="menu-item-description"> in Soße süß-sauer </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">00</div>
-            <div class="menu-item-name">Pad Pak Ruam</div>
-            <div class="menu-item-price"> 7,20 € </div>
-            <div class="menu-item-description"> Gebratener Brokkoli, Champignons, Zwiebel in Austernsoße</div>
-          </div>
+          {% endfor %}
         </div>
       </div>
     </div>
@@ -618,54 +285,15 @@ title: Thaiwok Oberhaid
       <div class="col-xs-12 col-sm-6">
         <div class="menu-section">
           <h2 class="menu-section-title">Original Thai Küche</h2>
+          {% assign thais = site.data.thais %}
+          {% for thai in thais %}
           <div class="menu-item">
-            <div class="menu-item-number">T1</div>
-            <div class="menu-item-name">Pad Thai Gung</div>
-            <div class="menu-item-price"> 9,90 € </div>
-            <div class="menu-item-description"> Gebratene Reisnudeln mit Garnelen, gehackten Erdnüssen in süß-sauer Soße </div>
+            <div class="menu-item-number">{{thai.number}}</div>
+            <div class="menu-item-name">{{thai.name}}<sup>{{thai.tags}}</sup></div>
+            <div class="menu-item-price"> {{thai.price}} €</div>
+            <div class="menu-item-description">{{thai.description}}</div>
           </div>
-          <div class="menu-item">
-            <div class="menu-item-number">T2</div>
-            <div class="menu-item-name">Laab</div>
-            <div class="menu-item-price"> 8,90 € </div>
-            <div class="menu-item-description"> Verschiedenes Fleisch mit Minze, roter Zwiebel, Koriander, geröstetem Reis, Chili in Zitronen-Fisch-Soße </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">T3</div>
-            <div class="menu-item-name">Pad Krapau</div>
-            <div class="menu-item-price"> 8,90 € </div>
-            <div class="menu-item-description"> Verschiedenes Fleisch mit Chili, Zwiebeln und scharfem Basilikum </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">T4</div>
-            <div class="menu-item-name">Yam Wun Sen Sea Food</div>
-            <div class="menu-item-price"> 10,90 € </div>
-            <div class="menu-item-description"> Glasnudelsalat mit Meeresfrüchten, Tomaten, Koriander und Chili in Zitronensoße</div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">T5</div>
-            <div class="menu-item-name">Papaya Salat</div>
-            <div class="menu-item-price"> 9,90 € </div>
-            <div class="menu-item-description"> Papaya mit Knoblauch, Tomaten, Bohnen, Erdnüsse und Chilis in Zitronen-Fisch-Soße </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">T6</div>
-            <div class="menu-item-name">Gai Pad Khing</div>
-            <div class="menu-item-price"> 8,90 € </div>
-            <div class="menu-item-description"> Hühnerfleisch mit Ingwer, Zwiebel und Gemüse </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">T7</div>
-            <div class="menu-item-name">Pad Wun Sen</div>
-            <div class="menu-item-price"> 9,90 € </div>
-            <div class="menu-item-description"> Glasnudeln mit Garnelen, Ei und Gemüse</div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-number">T8</div>
-            <div class="menu-item-name">Rote Tilapia</div>
-            <div class="menu-item-price"> Preis nach Gewicht </div>
-            <div class="menu-item-description"> mit verschiedenen Soßen nach Wahl</div>
-          </div>
+          {% endfor %}
         </div>
       </div> 
       <div class="col-xs-12 col-sm-6">
@@ -745,6 +373,46 @@ title: Thaiwok Oberhaid
           </div>
         </div>
       </div> 
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          <div class="menu-section">
+            <h2 class="menu-section-title">Beilagen</h2>
+            {% assign sides = site.data.sides %}
+            {% for side in sides %}
+            <div class="menu-item">
+              <div class="menu-item-number">{{side.number}}</div>
+              <div class="menu-item-name">{{side.name}}</div>
+              <div class="menu-item-price"> {{side.price}} €</div>
+              <div class="menu-item-description">{{side.description}}</div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <div class="menu-section">
+            <h2 class="menu-section-title">Nachtisch</h2>
+            {% assign desserts = site.data.desserts %}
+            {% for dessert in desserts %}
+            <div class="menu-item">
+              <div class="menu-item-number">{{dessert.number}}</div>
+              <div class="menu-item-name">{{dessert.name}}<sup>{{dessert.tags}}</sup></div>
+              <div class="menu-item-price"> {{dessert.price}} €</div>
+              <div class="menu-item-description">{{dessert.description}}</div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12">
+          <div class="menu-section">
+            <h5>Zusatzstoffe</h5>
+            <p>Konservierungsmittel = 1, Geschmacksverstärker = 2, Süßungsmittel = 3</p>
+            <h5>Allergenkennzeichen</h5>
+            <p>Ei = C, Fisch = D, Soja = F, Sesam = N, Milch = G</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
